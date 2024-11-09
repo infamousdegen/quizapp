@@ -8,24 +8,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp">
 
-        <!-- QuizActivity (no intent filter, no need for android:exported) -->
-        <activity android:name=".QuizActivity" />
-
-        <!-- MainActivity with intent filter, requires android:exported -->
-        <activity android:name=".MainActivity" android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- FlashActivity with intent filter, requires android:exported -->
+        <!-- FlashActivity as the Launcher Activity -->
         <activity android:name=".FlashActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MainActivity (no intent filter, so it’s not the launcher) -->
+        <activity android:name=".MainActivity" android:exported="true" />
+
+        <!-- QuizActivity (no intent filter) -->
+        <activity android:name=".QuizActivity" />
+
+        <!-- Other activities if needed... -->
 
     </application>
 </manifest>

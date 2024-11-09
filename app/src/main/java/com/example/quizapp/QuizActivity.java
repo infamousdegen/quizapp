@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.firestore.*;
 import java.util.ArrayList;
 import java.util.List;
-
+import android.content.Intent;
 public class QuizActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
