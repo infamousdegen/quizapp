@@ -1,0 +1,12 @@
+<!-- res/values/styles.xml -->
+<resources>
+
+    <!-- Base theme applied to all activities -->
+    <style name="Theme.QuizApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryDark">#3700B3</item>
+        <item name="colorAccent">#03DAC5</item>
+    </style>
+
+</resources>

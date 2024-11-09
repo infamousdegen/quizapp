@@ -1,6 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
-    id("com.android.application")
+    alias(libs.plugins.android.application) // Keep only this line for the Android application plugin
     id("com.google.gms.google-services")
 }
 
@@ -34,7 +33,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -42,5 +40,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Import Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+    // Add Firebase SDK dependencies
+    implementation("com.google.firebase:firebase-firestore")
 }

@@ -1,5 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.quizapp">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -9,15 +8,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp">
 
-        <activity android:name=".QuizActivity"></activity>
-        <activity android:name=".MainActivity">
+        <!-- QuizActivity (no intent filter, no need for android:exported) -->
+        <activity android:name=".QuizActivity" />
+
+        <!-- MainActivity with intent filter, requires android:exported -->
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".FlashActivity">
+        <!-- FlashActivity with intent filter, requires android:exported -->
+        <activity android:name=".FlashActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
