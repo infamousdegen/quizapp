@@ -1,4 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quizapp">
 
     <application
         android:allowBackup="true"
@@ -16,13 +17,23 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity (no intent filter, so it’s not the launcher) -->
+        <!-- MainActivity (primary entry after FlashActivity) -->
         <activity android:name=".MainActivity" android:exported="true" />
 
-        <!-- QuizActivity (no intent filter) -->
-        <activity android:name=".QuizActivity" />
+        <!-- LoginActivity for user authentication -->
+        <activity android:name=".LoginActivity" android:exported="true" />
 
-        <!-- Other activities if needed... -->
+        <!-- SignupActivity for new user registration -->
+        <activity android:name=".SignupActivity" android:exported="true" />
+
+        <!-- QuizActivity for the quiz functionality -->
+        <activity android:name=".QuizActivity" android:exported="true" />
+
+        <!-- ScoreSummaryActivity to display quiz results -->
+        <activity android:name=".ScoreSummaryActivity" android:exported="true" />
+
+        <!-- HistoryActivity for viewing user’s quiz history -->
+        <activity android:name=".HistoryActivity" android:exported="true" />
 
     </application>
 </manifest>

@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.android.application) // Keep only this line for the Android application plugin
-    id("com.google.gms.google-services")
+    alias(libs.plugins.android.application) // Android application plugin
+    id("com.google.gms.google-services") // Apply the Google services plugin here for Firebase
 }
 
 android {
@@ -37,12 +37,15 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation("androidx.recyclerview:recyclerview:1.2.1") // Add RecyclerView dependency
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    // Import Firebase BoM
+    // Import Firebase BoM to manage Firebase versions automatically
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
-    // Add Firebase SDK dependencies
+
+    // Firebase SDK dependencies
     implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-auth") // Firebase Authentication
 }

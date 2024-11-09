@@ -1,4 +1,5 @@
 package com.example.quizapp;
+import java.util.ArrayList;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +16,9 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     private List<ScoreEntry> scoreHistory;
 
+    // Constructor to initialize the list, with a null check to prevent NPE
     public HistoryAdapter(List<ScoreEntry> scoreHistory) {
-        this.scoreHistory = scoreHistory;
+        this.scoreHistory = (scoreHistory != null) ? scoreHistory : new ArrayList<>();
     }
 
     @NonNull
@@ -32,6 +34,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         holder.scoreText.setText("Score: " + entry.getScore() + " / " + entry.getTotalQuestions());
         holder.percentageText.setText("Percentage: " + entry.getPercentage() + "%");
 
+        // Format the date
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy HH:mm", Locale.getDefault());
         String dateString = sdf.format(new Date(entry.getDate()));
         holder.dateText.setText(dateString);

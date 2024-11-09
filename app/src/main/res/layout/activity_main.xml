@@ -29,4 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="View History" />
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_marginTop="16dp"/>
+
 </LinearLayout>

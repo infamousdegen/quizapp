@@ -12,37 +12,24 @@ public class Question {
     public Question() {
     }
 
-    // Getters
-    public String getQuestion() {
-        return question;
-    }
-
-    public List<String> getOptions() {
-        return options;
-    }
-
-    public String getCorrectOption() {
-        return correctOption;
-    }
-
-    public String getTopic() {
-        return topic;
-    }
-
-    // Setters (optional, depending on how you set up Firestore or use the class)
-    public void setQuestion(String question) {
+    // Parameterized constructor for convenience
+    public Question(String question, List<String> options, String correctOption, String topic) {
         this.question = question;
-    }
-
-    public void setOptions(List<String> options) {
         this.options = options;
-    }
-
-    public void setCorrectOption(String correctOption) {
         this.correctOption = correctOption;
-    }
-
-    public void setTopic(String topic) {
         this.topic = topic;
     }
+
+    // Getters and setters
+    public String getQuestion() { return question; }
+    public void setQuestion(String question) { this.question = question; }
+
+    public List<String> getOptions() { return options; }
+    public void setOptions(List<String> options) { this.options = options; }
+
+    public String getCorrectOption() { return correctOption; }
+    public void setCorrectOption(String correctOption) { this.correctOption = correctOption; }
+
+    public String getTopic() { return topic; }
+    public void setTopic(String topic) { this.topic = topic; }
 }
